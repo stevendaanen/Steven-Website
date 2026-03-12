@@ -1,1 +1,523 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steven Daanen - Finanzberatung & Vermögensaufbau</title>
 
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+--primary:#1a365d;
+--secondary:#2c5282;
+--accent:#48bb78;
+--text:#2d3748;
+--light:#f7fafc;
+}
+
+body{
+font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+line-height:1.6;
+color:var(--text);
+}
+
+.container{
+max-width:1200px;
+margin:0 auto;
+padding:0 20px;
+}
+
+/* Header */
+
+header{
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:1rem 0;
+}
+
+.logo{
+font-size:1.5rem;
+font-weight:bold;
+color:var(--primary);
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:2rem;
+}
+
+nav a{
+text-decoration:none;
+color:var(--text);
+transition:color 0.3s;
+}
+
+nav a:hover{
+color:var(--accent);
+}
+
+/* Hero */
+
+.hero{
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+color:white;
+padding:120px 0 80px;
+margin-top:60px;
+}
+
+.hero-content{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:3rem;
+align-items:center;
+}
+
+h1{
+font-size:3rem;
+margin-bottom:1rem;
+line-height:1.2;
+}
+
+.hero p{
+font-size:1.2rem;
+margin-bottom:2rem;
+opacity:0.95;
+}
+
+.cta-button{
+display:inline-block;
+background:var(--accent);
+color:white;
+padding:15px 35px;
+border-radius:50px;
+text-decoration:none;
+font-size:1.1rem;
+transition:transform 0.3s,box-shadow 0.3s;
+}
+
+.cta-button:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(72,187,120,0.3);
+}
+
+.badge{
+display:inline-block;
+background:rgba(255,255,255,0.2);
+padding:5px 15px;
+border-radius:20px;
+margin-right:10px;
+}
+
+/* Services */
+
+.services{
+padding:80px 0;
+background:var(--light);
+}
+
+h2{
+text-align:center;
+font-size:2.5rem;
+color:var(--primary);
+margin-bottom:3rem;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:2rem;
+margin-top:3rem;
+}
+
+.service-card{
+background:white;
+padding:2rem;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+transition:transform 0.3s;
+}
+
+.service-card:hover{
+transform:translateY(-5px);
+}
+
+.service-icon{
+font-size:3rem;
+margin-bottom:1rem;
+}
+
+.service-card h3{
+color:var(--primary);
+margin-bottom:1rem;
+}
+
+/* Benefits */
+
+.benefits{
+padding:80px 0;
+}
+
+.benefit-list{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:2rem;
+max-width:800px;
+margin:0 auto;
+}
+
+.benefit-item{
+display:flex;
+align-items:start;
+gap:1rem;
+}
+
+.check-icon{
+color:var(--accent);
+font-size:1.5rem;
+flex-shrink:0;
+}
+
+/* About */
+
+.about{
+padding:80px 0;
+background:var(--light);
+}
+
+.about-content{
+display:grid;
+grid-template-columns:1fr 2fr;
+gap:3rem;
+align-items:center;
+}
+
+.experience-badge{
+background:var(--accent);
+color:white;
+padding:10px 20px;
+border-radius:25px;
+display:inline-block;
+margin-bottom:1rem;
+}
+
+/* Contact */
+
+.contact{
+padding:80px 0;
+background:var(--primary);
+color:white;
+text-align:center;
+}
+
+.contact h2{
+color:white;
+}
+
+/* Footer */
+
+footer{
+background:var(--text);
+color:white;
+text-align:center;
+padding:2rem 0;
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+.hero-content{
+grid-template-columns:1fr;
+}
+
+h1{
+font-size:2rem;
+}
+
+nav ul{
+flex-direction:column;
+gap:1rem;
+}
+
+.about-content{
+grid-template-columns:1fr;
+}
+
+.benefit-list{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav class="container">
+
+<div class="logo">Steven Daanen</div>
+
+<ul>
+<li><a href="#home">Start</a></li>
+<li><a href="#services">Leistungen</a></li>
+<li><a href="#about">Über mich</a></li>
+<li><a href="#contact">Kontakt</a></li>
+</ul>
+
+</nav>
+</header>
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div>
+
+<h1>Mehr Geld. Weniger Sorgen.</h1>
+
+<p>
+Ich helfe Ihnen, Ihre Fixkosten zu senken und clever Vermögen aufzubauen.
+</p>
+
+<div style="margin-bottom:2rem;">
+
+<span class="badge">✓ Kostenlose Analyse</span>
+<span class="badge">✓ Unabhängige Beratung</span>
+
+</div>
+
+<a href="#contact" class="cta-button">
+Jetzt kostenlos beraten lassen
+</a>
+
+</div>
+
+<div style="text-align:center;">
+<img src="Banner.jpg" alt="Karriere Wochenende" style="width:100%; max-width="700px">
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="services" id="services">
+
+<div class="container">
+
+<h2>Meine Leistungen für Sie</h2>
+
+<p style="text-align:center;font-size:1.2rem;max-width:700px;margin:0 auto;">
+Profitieren Sie von meiner Erfahrung – komplett kostenlos und unverbindlich.
+</p>
+
+<div class="services-grid">
+
+<div class="service-card">
+<div class="service-icon">📊</div>
+<h3>Fixkosten-Analyse</h3>
+<p>
+Ich analysiere Ihre laufenden Kosten und zeige Ihnen konkrete Einsparpotenziale.
+</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">📈</div>
+<h3>Vermögensaufbau</h3>
+<p>
+Gemeinsam entwickeln wir eine Strategie, um langfristig Vermögen aufzubauen.
+</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">🎯</div>
+<h3>Finanzoptimierung</h3>
+<p>
+Ich helfe Ihnen dabei, Ihre finanzielle Situation strukturiert zu verbessern.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="benefits">
+
+<div class="container">
+
+<h2>Ihre Vorteile</h2>
+
+<div class="benefit-list">
+
+<div class="benefit-item">
+<span class="check-icon">✓</span>
+<div>
+<strong>100% kostenlose Beratung</strong>
+<p>Keine versteckten Kosten</p>
+</div>
+</div>
+
+<div class="benefit-item">
+<span class="check-icon">✓</span>
+<div>
+<strong>Einsparpotenziale erkennen</strong>
+<p>Viele Menschen zahlen unnötig zu viel</p>
+</div>
+</div>
+
+<div class="benefit-item">
+<span class="check-icon">✓</span>
+<div>
+<strong>Unabhängige Analyse</strong>
+<p>Individuelle Betrachtung Ihrer Situation</p>
+</div>
+</div>
+
+<div class="benefit-item">
+<span class="check-icon">✓</span>
+<div>
+<strong>Individuelle Strategien</strong>
+<p>Maßgeschneiderte Lösungen</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="about" id="about">
+
+<div class="container">
+
+<h2>Über mich</h2>
+
+<div class="about-content">
+
+<div style="margin-bottom:30px;">
+<img src="profil.jpg" alt="Steven Daanen" 
+style="width:350px; border-radius:100%; box-shadow:0 5px 15px rgba(0,0,0,0.3);">
+</div>
+
+<div>
+
+<span class="experience-badge">
+Moderne Finanzstrategien
+</span>
+
+<h3 style="font-size:1.8rem;margin-bottom:1rem;">
+Steven Daanen
+</h3>
+
+<p style="margin-bottom:1rem;">
+Ich unterstütze Menschen dabei, ihre Fixkosten zu senken und ihr Geld effizienter zu nutzen.
+Mein Fokus liegt darauf, einfache und verständliche Strategien zu zeigen, mit denen jeder seine finanzielle Situation verbessern kann.
+</p>
+
+<p style="margin-bottom:1rem;">
+Gerade viele Menschen zahlen unnötig zu viel für Versicherungen oder andere laufende Kosten. Durch eine strukturierte Analyse lassen sich oft überraschend hohe Einsparungen erzielen.
+</p>
+
+<p>
+<strong>Meine Philosophie:</strong>
+Finanzwissen sollte für jeden zugänglich sein. Deshalb ist meine Erstberatung kostenlos und unverbindlich.
+</p>
+
+</div>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<h2>Starten Sie jetzt Ihre kostenlose Finanzanalyse</h2>
+
+<p style="font-size:1.2rem;margin-bottom:2rem;">
+Schreiben Sie mir direkt auf WhatsApp und wir schauen uns gemeinsam Ihre Finanzen an.
+</p>
+
+<a href="https://wa.me/436765070406" class="cta-button">
+💬 Jetzt über WhatsApp kontaktieren
+</a>
+
+<div style="margin-top:40px;font-size:1.1rem;">
+
+<p><strong>Kontaktmöglichkeiten</strong></p>
+
+<p>
+📧 E-Mail:
+<a href="mailto:steven.daanen05@gmail.com" style="color:white;">
+steven.daanen05@gmail.com
+</a>
+</p>
+
+<p>
+📞 Telefon:
+<a href="tel:+436765070406" style="color:white;">
+0676 5070406
+</a>
+</p>
+
+<p>
+💬 WhatsApp:
+<a href="https://wa.me/436765070406" style="color:white;">
++43 676 5070406
+</a>
+</p>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+
+<div class="container">
+
+<p>
+© 2024 Steven Daanen – Finanzberatung & Vermögensaufbau
+</p>
+
+</div>
+
+</footer>
+
+<script>
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+anchor.addEventListener('click',function(e){
+e.preventDefault();
+const target=document.querySelector(this.getAttribute('href'));
+if(target){
+target.scrollIntoView({
+behavior:'smooth',
+block:'start'
+});
+}
+});
+});
+
+</script>
+
+</body>
+</html>
